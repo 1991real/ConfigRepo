@@ -1,21 +1,26 @@
 server:
   port: 8082
+
 spring:
-  jpa:
-    database: postgresql
-    show-sql: true
-    properties:
-      hibernate:
-        ddl-auto: update
-        jdbc:
-          lob:
-            non_contextual_creation=true:
   datasource:
     url: jdbc:postgresql://localhost:5433/testprac
     username: postgres
     password: 1991
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc.lob.non_contextual_creation: true
+
   application:
     name: user-service
+
   cloud:
     config:
       uri: http://localhost:8888
