@@ -1,17 +1,18 @@
 server:
   port: 8082
-
+spring.jpa.hibernate.
 spring:
   jpa:
     database: postgresql
     show-sql: true
     properties:
       hibernate:
+        ddl-auto: update
         jdbc:
           lob:
             non_contextual_creation=true:
   datasource:
-    url: jdbc:postgresql://localhost:5433/test
+    url: jdbc:postgresql://localhost:5433/testprac
     username: postgres
     password: 1991
   application:
