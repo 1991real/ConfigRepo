@@ -14,6 +14,10 @@ spring:
           uri: lb://USER-SERVICE
           predicates:
             - Path=/users/**
+        - id: download-service
+          uri: lb//download-service
+          predicates:
+            - Path=/download/**
 eureka:
   client:
     service-url:
