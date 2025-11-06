@@ -15,7 +15,7 @@ spring:
           predicates:
             - Path=/users/**
         - id: download-service
-          uri: lb//download-service
+          uri: lb//DOWNLOAD-SERVICE
           predicates:
             - Path=/download/**
 eureka:
