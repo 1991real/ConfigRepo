@@ -1,0 +1,15 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: file-service
+  cloud:
+    config:
+      uri: http://localhost:8888
+  datasource:
+    # Optional if you store file metadata in DB
+  eureka:
+    client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka/
