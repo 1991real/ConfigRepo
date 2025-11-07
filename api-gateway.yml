@@ -18,10 +18,3 @@ spring:
           uri: lb://DOWNLOAD-SERVICE
           predicates:
             - Path=/download/**
-          filters:
-            - StripPrefix=1   # remove /download before forwarding
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,routes  # include 'routes' to see gateway routes
