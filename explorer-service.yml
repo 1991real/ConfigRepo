@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8083
 
 spring:
   datasource:
@@ -19,7 +19,7 @@ spring:
         jdbc.lob.non_contextual_creation: true
 
   application:
-    name: user-service
+    name: explorer-service
 
   cloud:
     config:
